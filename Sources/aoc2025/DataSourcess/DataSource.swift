@@ -50,6 +50,9 @@ final class DataSource: Sendable {
         case 1:
             Day1()
 
+        case 2:
+            Day2()
+            
         default:
             fatalError("Day \(day) not yet implemented")
         }
