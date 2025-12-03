@@ -52,7 +52,10 @@ final class DataSource: Sendable {
 
         case 2:
             Day2()
-            
+
+        case 3:
+            Day3()
+
         default:
             fatalError("Day \(day) not yet implemented")
         }
