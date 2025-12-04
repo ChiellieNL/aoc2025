@@ -39,6 +39,11 @@ final class DataSource: Sendable {
         return lines
     }
 
+    static func grid(forDay day: Int, useExampleInput: Bool = false) -> Grid {
+        let lines = self.lines(forDay: day, useExampleInput: useExampleInput)
+        return Grid(lines)
+    }
+
     /**
      Returns the AOCDay implementation for the specified day
 
@@ -47,14 +52,10 @@ final class DataSource: Sendable {
      */
     static func code(forDay day: Int) -> AOCDay {
         switch day {
-        case 1:
-            Day1()
-
-        case 2:
-            Day2()
-
-        case 3:
-            Day3()
+        case 1: Day1()
+        case 2: Day2()
+        case 3: Day3()
+        case 4: Day4()
 
         default:
             fatalError("Day \(day) not yet implemented")
